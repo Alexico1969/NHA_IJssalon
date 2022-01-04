@@ -11,18 +11,15 @@ app.secret_key = 'Bruce Wayne is Batman'
 def home_page():
     return render_template('home.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-   return "login"
+@app.route('/prijzen', methods=['GET', 'POST'])
+def prijzen():
+   return "prijzen"
 
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
-   return "signup"
+@app.route('/recepten', methods=['GET', 'POST'])
+def recepten():
+   return "recepten"
 
-@app.route('/logout')
-def logout():
-    session.pop('userid', None)
-    return redirect(url_for('home_page'))
+
 
 # Do not alter this if statement below
 # This should stay towards the bottom of this file

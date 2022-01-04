@@ -1,26 +1,21 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h3>templates/home.html</h3>
+    <h3 class="welcome">Welkom op onze website</h3>
+    <br>
+    <div class="flex-container">
+        <div class="left_panel">
+            <h3>Prijzen</h3>
+        </div>
+        <div class="center">
+        <img class="home_img mid_panel" src="static/ice_01.jpg">
+        </div>
+        <div class="right_panel">
+            <h3>Recepten</h3>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %}
-    <script>
-    $(document).ready(function(){
-        console.log('--- js file loaded ---');
-
-        var content =  $.ajax({
-            url: "https://api.nasa.gov/planetary/apod?api_key=VM2f40EQQ0tk58nvmPhpVa6gthc5ma6Chgll56N7",
-            contentType: "application/json",
-            dataType: 'json',
-            success: function(result){
-                console.log(result);
-            }
-
-
-
-        })
-    })
-    </script>
-    <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+   
 {% endblock %}
