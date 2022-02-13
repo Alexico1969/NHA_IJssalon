@@ -1,7 +1,7 @@
 
 from os import getenv, environ
 from flask import Flask, render_template, session, request, redirect, url_for, g
-
+from helper import prijs
 
 app=Flask(__name__, static_url_path='/static')
 
@@ -13,11 +13,31 @@ def home_page():
 
 @app.route('/prijzen', methods=['GET', 'POST'])
 def prijzen():
-   return "prijzen"
+    items = [
+        {
+            "product": "vanille-ijs 1 liter",
+            "prijs" : prijs(3)
+        }, 
+    {
+            "product": "chocolade-ijs 1 liter",
+            "prijs" : prijs(3)
+        }
+    ]
+    return render_template("prijzen.html", items=items)
 
 @app.route('/recepten', methods=['GET', 'POST'])
 def recepten():
-   return "recepten"
+    items = [
+        {
+            "recept": "Tiramisu di nona",
+            "img" : "tiramisu.png"
+        }, 
+    {
+            "recept": "IJstaart met chocolade",
+            "img" : "ijstaart.png"
+        }
+    ]
+    return render_template("recepten.html", items=items)
 
 
 

@@ -26,8 +26,28 @@ h6{
 
 }
 
+a{
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(61, 25, 1);
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(155, 134, 76);
+}
+
+a::after{
+    color: black;
+}
+
 .welcome{
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .footer {
@@ -41,9 +61,10 @@ h6{
     text-align: center;
   }
 
-p, a {
-    font-size: 16px;
-    
+.menu{
+    border:rgb(238, 158, 105) solid 3px;
+    border-radius: 5px;
+    height: 120px;
 }
 
 .home_img{
@@ -73,6 +94,7 @@ p, a {
   text-align: center;
   border-radius: 50%;
   background-color: rgb(61, 25, 1);
+  font-family: 'Pushster', cursive;
 }
 
 .mid_panel{
@@ -87,4 +109,14 @@ p, a {
     text-align: center;
     border-radius: 50%;
     background-color: rgb(61, 25, 1);
+    font-family: 'Pushster', cursive;
+}
+
+.items-list{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recept{
+    border-radius: 5px;
 }
