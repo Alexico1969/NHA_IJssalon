@@ -4,6 +4,7 @@
 */
 body {
     background-color: #be6c00;
+    background-image: url("bg.jpg");
     background-size: cover;
     font-family: 'Pushster', cursive;
 }
@@ -83,6 +84,10 @@ a::after{
 
 .flex-container{
   display: flex;
+  background-color:rgba(122, 117, 113, 0.466);  
+  /*background-color: red; */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .left_panel{
